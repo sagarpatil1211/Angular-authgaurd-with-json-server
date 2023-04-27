@@ -1,0 +1,63 @@
+<div class="container mt-5 px-5">
+    <div class="row justify-content-between">
+         <!-- -----Signup Form ------ -->
+        <div class="col-lg-5">
+            <div >
+                <h2>Registration Form</h2>
+                <form [formGroup]="formdata" (ngSubmit)="signup(formdata.value)" >
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Enter Name</label>
+                        <span class="text-danger ps-3" *ngIf="formdata.controls.name.touched && formdata.controls.name.invalid">Enter name</span>
+                        <input type="text" class="form-control" id="name" formControlName = 'name'>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mail" class="form-label">Email address</label>
+                        <span class="text-danger ps-3" *ngIf="formdata.controls.email.touched && formdata.controls.email.invalid">Enter Email</span>
+                        <input type="email" class="form-control" id="mail" aria-describedby="emailHelp" formControlName = "email">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                   
+                    <div class="mb-3">
+                        <label for="pass" class="form-label">Password</label>
+                        <span class="text-danger ps-3" *ngIf="formdata.controls.password.touched && formdata.controls.password.invalid">Enter password </span>
+                        <input type="password" class="form-control" id="pass" formControlName = "password">
+                    </div>
+                   
+                    <button type="submit" class="btn btn-primary" [disabled]="formdata.invalid">Register</button>
+                </form>
+            </div>
+        </div>
+
+         <!-- -----Login Form ------ -->
+
+        <div class="col-lg-5">
+            <h2>Log in Form</h2>
+            <div>
+                <form [formGroup]="form" (ngSubmit)="login(form.value)">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <span class="text-danger ps-3" *ngIf="form.controls.email.touched && form.controls.email.invalid">Enter Email</span>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" formControlName = "email">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                   
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <span class="text-danger ps-3" *ngIf="form.controls.password.touched && form.controls.password.invalid">Enter password </span>
+                        <input type="password" class="form-control" id="password" formControlName = "password">
+                    </div>
+                  
+                    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Log in</button>
+                </form>
+
+                
+            </div>
+
+            
+        </div>
+
+       
+
+       
+    </div>
+</div>

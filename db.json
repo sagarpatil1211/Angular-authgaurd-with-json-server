@@ -1,0 +1,51 @@
+{
+  "users": [
+    {
+      "name": "vivek",
+      "email": "v@gmail.com",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "name": "aniket",
+      "email": "a@gmail.com",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "name": "rushi",
+      "email": "r@gmail.com",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "name": "raj",
+      "email": "rr@gmail.com",
+      "password": "123",
+      "id": 4
+    }
+  ],
+  "admins": [
+    {
+      "name": "sagar patil",
+      "email": "s@gmail.com",
+      "password": "123",
+      "id": 1,
+      "usertype": "admin"
+    },
+    {
+      "name": "jaydip",
+      "email": "j@gmail.com",
+      "password": "123",
+      "id": 2,
+      "usertype": "admin"
+    },
+    {
+      "name": "divakar",
+      "email": "d@gmail.com",
+      "password": "123",
+      "id": 3,
+      "usertype": "admin"
+    }
+  ]
+}
